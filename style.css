@@ -1,51 +1,252 @@
 body {
   margin: 0;
-  background-color: #35495d;
+  background-color: #0d1b2a; /* https://rockman-x-dive.fandom.com/wiki/X */
   font-family: 'Conthrax', sans-serif;
-  padding-top: 60px;
+  padding-top: 70px;
+  color: #ffffff;
 }
 
+/* Neon Header */
 header {
-  background-color: #4c7caf;
-  padding: 40px 0;
+  background-color: #022B44;
+  padding: 40px 20px;
   text-align: center;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px #00ffff88, 0 0 25px #00ffff22;
 }
 
 header h1 {
   margin: 0;
-  color: white;
+  color: #00ffff;
   font-size: 2.5em;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffffaa;
 }
 
+/* Neon Menu */
 .menu {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #d9d9d9;
-  z-index: 999; /* fica acima dos outros elementos */
+  background-color: #101820;
+  box-shadow: 0 0 10px #00ffff66;
+  z-index: 999;
 }
 
 .menu ul {
   display: flex;
-  justify-content: space-evenly;
-  list-style-type: none;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
+  list-style-type: none;
   padding: 15px;
   margin: 0;
-  font-family: 'Jersey 25', sans-serif;
   font-size: 30px;
 }
 
 .menu a {
   text-decoration: none;
-  background-color: #d9d9d9;
-  padding: 15px 20px;
-  color: black;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: transparent;
+  padding: 10px 20px;
+  color: #00ffff;
+  font-family: 'Conthrax', sans-serif;
+  border: 1px solid #00ffff55;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px #00ffff33;
 }
 
 .menu a:hover {
-  background-color: #de5cff;
-  color: white;
+  background-color: #00ffff11;
+  color: #ffffff;
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff99;
+}
+
+/* Imagens com estilo */
+.logo img {
+  display: flex;
+  max-width: 50%;
+  height: auto;
+  border-radius: 20%;
+  justify-self: center;
+  border: 2px solid #00ffff99;
+  box-shadow: 0 0 10px #00ffff44;
+}
+
+/* Título */
+h1 {
+  text-align: center;
+  color: #00ffff;
+  text-shadow: 0 0 6px #00ffff, 0 0 12px #00ffff99;
+}
+
+/* Parágrafos */
+p {
+  margin: 50px;
+  color: #ffffff;
+  text-shadow: 0 0 3px #00ffff33;
+}
+
+/* Centralização geral */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;          /* Espaço entre os cartões */
+  flex-wrap: wrap;    /* Permite que os cartões quebrem a linha em telas menores */
+}
+
+
+/* Cartão com efeito neon */
+.card {
+  background-color: #0b2434;
+  border-radius: 30px;
+  width: 260px;
+  padding: 30px 1px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.15);
+  transition: transform 0.3s ease;
+  border: 2px solid #00ffff50;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 30px #00ffffaa, 0 0 60px #00ffff44;
+}
+
+.imagem {
+  width: 80%; /* Reduz o tamanho do contêiner */
+  margin: 0 auto; /* Centraliza, se necessário */
+}
+
+/* Imagem responsiva */
+.imagem img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10%;
+  border: 2px solid #00ffff73;
+  box-sizing: border-box;
+}
+
+/* Nome com brilho neon */
+.nome {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #00ffff;
+  margin: 0;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffffaa;
+}
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  .menu ul {
+    font-size: 22px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu a {
+    padding: 10px 15px;
+  }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.6em;
+  }
+
+  .menu ul {
+    font-size: 18px;
+  }
+
+  .menu a {
+    padding: 8px 10px;
+  }
+}
+
+/* Responsividade do cartão */
+@media (max-width: 600px) {
+  .card {
+    width: 90%;
+    padding: 25px 15px;
+  }
+
+  .nome {
+    font-size: 1.4em;
+  }
+}
+
+.card1 {
+  background-color: #340b0b;
+  border-radius: 30px;
+  width: 260px;
+  padding: 30px 1px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  border: 2px solid #ff000050;
+}
+
+.card1:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 30px #ff0000aa, 0 0 60px #ff000044;
+}
+
+.imagem1 {
+  width: 80%; /* Reduz o tamanho do contêiner */
+  margin: 0 auto; /* Centraliza, se necessário */
+}
+
+/* Imagem responsiva */
+.imagem1 img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10%;
+  border: 2px solid #ff000073;
+  box-sizing: border-box;
+}
+
+/* Nome com brilho neon */
+.nome1 {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #ff0000;
+  margin: 0;
+  text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000aa;
+}
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  .menu ul {
+    font-size: 22px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu a {
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .card1 {
+    width: 90%;
+    padding: 25px 15px;
+  }
+
+  .nome1 {
+    font-size: 1.4em;
+  }
 }
